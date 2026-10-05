@@ -1,0 +1,8 @@
+{
+  "name": "second-brain-vault",
+  "displayName": "Second Brain Vault",
+  "version": "0.1.0",
+  "description": "Shared Obsidian vault skills for Claude Code: gate orchestration, graphify onboard, vault rituals, Opus 5.5 prompting, Mermaid/draw.io diagrams.",
+  "author": { "name": "Second Brain contributors" },
+  "keywords": ["obsidian", "vault", "skills", "graphify", "second-brain"]
+}
