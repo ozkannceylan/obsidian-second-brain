@@ -14,7 +14,7 @@ Generic map for the template under `vault-template/`. Rename the vault root to w
 | `archive/` | Cold storage. Prefer archive over delete. |
 | `assets/` | Images, attachments, media |
 | `templates/` | Obsidian templates (daily note, project init, …) |
-| `claude-code-files/` | Claude Code skills, system docs, plugin snapshot |
+| `claude-code-files/` | Claude Code skills, example agent prompts (`agents/`), system docs, plugin snapshot |
 | `rookie/` | Optional agent personality config — **do not modify** unless you own that harness |
 
 Optional extras you may add locally (not required by this template): `wiki/` for a compiled knowledge graph, `Reviews/` for weekly syntheses, `Bases/` for Obsidian Bases schemas.

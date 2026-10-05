@@ -8,7 +8,8 @@ It ships a PARA-style folder layout, reusable Claude Code skills, a `BASE_CLAUDE
 
 - Folder structure for capture → projects → areas → archive (PARA)
 - Generic system docs (`SECOND_BRAIN.md`, `BASE_CLAUDE.md`)
-- Claude Code skills: vault rituals, graphify onboarding, gate orchestration, Mermaid/draw.io diagrams, Opus prompting checklist
+- Claude Code skills: vault rituals, graphify onboarding, gate orchestration, Mermaid/draw.io diagrams, Opus prompting checklist, ADHD-friendly study tutor, robotics lessons retrieval, NotebookLM deliverables
+- Example Claude Code agent prompts: an 11-agent roster from an AMR (autonomous mobile robot) project
 - A Claude plugin snapshot (`second-brain-vault`) with the same skills
 
 ## What this is not
@@ -33,6 +34,8 @@ See [VAULT-STRUCTURE.md](VAULT-STRUCTURE.md) for the PARA map and hard rules.
 
 ## Included skills
 
+Path: `vault-template/claude-code-files/skills/` (mirrored in `plugin/second-brain-vault/skills/`).
+
 | Skill | Role |
 |-------|------|
 | `vault` | Session start/end, lessons, decisions, repo→vault mirror sync |
@@ -40,10 +43,22 @@ See [VAULT-STRUCTURE.md](VAULT-STRUCTURE.md) for the PARA map and hard rules.
 | `gate-orchestration` | Multi-agent Orchestrator + Judge gate protocol |
 | `diagrams-mermaid-draw-io` | Mermaid-first diagrams; draw.io optional |
 | `opus-5-5-prompting` | Prompting checklist for Claude Opus 5.5 |
+| `adhd-study-tutor` | ADHD-friendly study mode: one command per message, quiz after each note |
+| `robotics-lessons` | Search a verified lessons corpus (ROS 2, PLC, MuJoCo, Gazebo, VLA…) before guessing |
+| `notebooklm` | Turn vault docs into NotebookLM videos, podcasts, quizzes, slides via `notebooklm-py` |
+
+## Included agent prompts — `agents/amr/`
+
+Path: `vault-template/claude-code-files/agents/amr/`. Eleven Claude Code subagent prompts from an autonomous mobile robot / forklift project, one agent per layer:
+
+`agv-ros2` (ROS 2 VDA 5050 client + Nav2), `arch-docs` (ADRs, roadmap), `bridge` (ROS 2 ↔ OPC UA signal bridge), `fleet` (VDA 5050 fleet manager, MQTT), `hmi` (commissioning HMI), `infra` (cross-cutting plumbing), `interface` (VDA 5050 / OPC UA contracts), `plc` (Siemens standard + safety program), `safety-spec` (ISO 13849 safety requirements), `sim` (Gazebo), `verifier` (read-only gate reviewer).
+
+They are agent prompts, not skills: copy them into a repo's `.claude/agents/` and adapt to your own `CLAUDE.md`. See [agents/amr/README.md](vault-template/claude-code-files/agents/amr/README.md).
 
 ## Intentionally excluded
 
-Personal decision inventories, study tutors tied to private curricula, course-specific lesson packs, NotebookLM / Google-account workflows, and sync cutover notes. Those stay private.
+- **No private vault content:** no journals, project notes, personal decision inventories, private course material, credentials, or machine-specific paths.
+- **Ops / deployment skills stay private:** chat-bot bridges, SSH/server break-glass access, cloud VPS operations, CMS publishing, video upload automation, cookie-based CLI wrappers, task-dispatch harnesses, and booking playbooks. They depend on accounts, tokens or servers and are not portable.
 
 ## License
 

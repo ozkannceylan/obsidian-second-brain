@@ -27,7 +27,8 @@ YourVault/   # or MyNotes — whatever you name the vault root
 ├── assets/             Images, attachments, media files
 ├── templates/          Obsidian templates (daily notes, project init, etc.)
 ├── claude-code-files/  Claude Code skills, configs, and this file
-│   └── skills/         Reusable skills for Claude Code
+│   ├── skills/         Reusable skills for Claude Code
+│   └── agents/         Example subagent prompts (e.g. agents/amr/)
 └── rookie/             Agent personality config (do NOT modify)
 ```
 
@@ -81,6 +82,7 @@ The vault gives Claude Code something no single repo can: context across all pro
 `claude-code-files/` is Claude Code’s own workspace in the vault:
 
 - **skills/** — Reusable skills that work across all projects (source of truth)
+- **agents/** — Example project subagent prompts (copy into a repo's `.claude/agents/`), e.g. `agents/amr/`
 - **plugin/second-brain-vault/** — Claude plugin snapshot; try with `claude --plugin-dir …/second-brain-vault`
 - This file (`SECOND_BRAIN.md`) — System documentation
 - `BASE_CLAUDE.md` — Template prepended to every project’s `CLAUDE.md`

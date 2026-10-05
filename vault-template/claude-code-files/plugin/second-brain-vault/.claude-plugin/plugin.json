@@ -1,8 +1,8 @@
 {
   "name": "second-brain-vault",
   "displayName": "Second Brain Vault",
-  "version": "0.1.0",
-  "description": "Shared Obsidian vault skills for Claude Code: gate orchestration, graphify onboard, vault rituals, Opus 5.5 prompting, Mermaid/draw.io diagrams.",
-  "author": { "name": "Second Brain contributors" },
-  "keywords": ["obsidian", "vault", "skills", "graphify", "second-brain"]
+  "version": "0.2.0",
+  "description": "Obsidian second-brain skills for Claude Code: vault rituals, graphify onboarding, Orchestrator + Judge gate orchestration, Mermaid/draw.io diagrams, Opus 5.5 prompting, ADHD-friendly study tutor, robotics lessons retrieval, NotebookLM deliverables.",
+  "author": { "name": "Ozkan Ceylan" },
+  "keywords": ["obsidian", "vault", "skills", "second-brain", "para", "graphify", "multi-agent", "orchestration", "diagrams", "mermaid", "prompting", "study", "adhd", "robotics", "lessons", "notebooklm"]
 }
